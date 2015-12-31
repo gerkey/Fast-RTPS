@@ -39,7 +39,7 @@ public:
 	Constructor
 	* @param p Pointer to the EDPSimple associated with this listener.
 	*/
-	EDPSimplePUBListener(EDPSimple* p):mp_SEDP(p){free(aux_msg.buffer);aux_msg.buffer = nullptr;};
+	EDPSimplePUBListener(EDPSimple* p):mp_SEDP(p){aux_msg.buffer = nullptr;};
 	virtual ~EDPSimplePUBListener(){};
 	/**
 	* Virtual method, 
@@ -70,7 +70,7 @@ public:
 	/**
 	* @param p
 	*/
-	EDPSimpleSUBListener(EDPSimple* p):mp_SEDP(p){}
+	EDPSimpleSUBListener(EDPSimple* p):mp_SEDP(p){aux_msg.buffer = nullptr;}
 
 	virtual ~EDPSimpleSUBListener(){}
 	/**
